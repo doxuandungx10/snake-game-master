@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>SnakeGame</title>
+</head>
+
+<body id="body">
+    <div id="screen">
+        <canvas id="snake" width="800" height="800">
+        </canvas>
+        <div id="checkbox">
+            <img id="startgame" src="https://i.gifer.com/origin/fe/fe9eebde5e19b66192281164142359e4_w200.gif" alt="">
+        </div>
+    </div>
+
+    <div id="world"></div>
+    <div id="canvas-background"></div>
+
+
+</body>
+<!-- <script src="https://code.jquery.com/jquery-1.11.1.js"></script> -->
+<script src="/socket.io/socket.io.js"></script>
+
+<script type="text/javascript" src="js/snake.js"></script>
+<script type="text/javascript" src="js/gameover.js"></script>
+<script type="text/javascript" src="js/refresh.js"></script>
+<script>
+
+    function sendToServer(direction) {
+        socket.emit('direction', direction);
+    }
+
+</script>
+
+</html>
